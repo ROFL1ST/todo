@@ -15,7 +15,7 @@ class ProfilePic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final themeData =
+    final themeData =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? "DarkTheme"
             : "LightTheme";
@@ -29,18 +29,18 @@ class ProfilePic extends StatelessWidget {
         children: [
           imageUrl != null
               ? CircleAvatar(
-                radius: 42,
-                backgroundImage: NetworkImage(
-                  imageUrl,
-                ),
-              )
+                  radius: 42,
+                  backgroundImage: NetworkImage(
+                    imageUrl,
+                  ),
+                )
               : CircleAvatar(
-                // backgroundColor: Theme.of(context).iconTheme.color,
-                radius: 42,
-                backgroundImage: AssetImage(
-                  "assets/icon/man.png",
+                  // backgroundColor: Theme.of(context).iconTheme.color,
+                  radius: 42,
+                  backgroundImage: AssetImage(
+                    "assets/icon/man.png",
+                  ),
                 ),
-              ),
         ],
       ),
     );
